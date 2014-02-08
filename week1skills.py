@@ -1,11 +1,11 @@
 # Things you should be able to do.
 animals = ['cat','dog', 'fish', 'gorilla', 'baloonicorn', 'monkey', 'cheese']
-numbers = range(10)
+numbers = range(1,10)
 
 # Write a function that takes a list and returns a new list with only the odd numbers.
 def all_odd(some_list):
     new_list = []
-    for i in some_list:
+    for i in range(len(some_list)):
         if i % 2 == 1:
             addme = some_list[i]
             new_list.append(addme)
@@ -16,7 +16,7 @@ print all_odd(numbers)
 # Write a function that takes a list and returns a new list with only the even numbers.
 def all_even(some_list):
     new_list = []
-    for i in some_list:
+    for i in range(len(some_list)):
         if i % 2 == 0:
             new_list.append(some_list[i])
     return new_list
@@ -35,7 +35,7 @@ print long_words(animals)
 # Write a function that finds the smallest element in a list of integers and returns it.
 def smallest(some_list):
     minnumber = some_list[0]
-    for i in some_list:
+    for i in range(len(some_list)):
         if some_list[i] <= minnumber:
             minnumber = some_list[i]
     return minnumber
@@ -44,7 +44,7 @@ print smallest(numbers)
 # Write a function that finds the largest element in a list of integers and returns it.
 def largest(some_list):
     maxnumber = some_list[0]
-    for i in some_list:
+    for i in range(len(some_list)):
         if some_list[i] >= maxnumber:
             maxnumber = some_list[i]
     return maxnumber
@@ -54,7 +54,7 @@ print largest(numbers)
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(some_list):
     halflist = []
-    for i in some_list:
+    for i in range(len(some_list)):
         halflist.append((some_list[i]/2))
     return halflist
 
@@ -72,7 +72,7 @@ print word_lengths(animals)
 # Write a function (using iteration) that sums all the numbers in a list.
 def sum_numbers(numbers):
     total = 0
-    for i in numbers:
+    for i in range(len(numbers)):
         total = total + numbers[i]
     return total
 print sum_numbers(numbers)
@@ -80,7 +80,7 @@ print sum_numbers(numbers)
 # Write a function that multiplies all the numbers in a list together.
 def mult_numbers(numbers):
     product = 1
-    for i in numbers:
+    for i in range(len(numbers)):
         product = product * numbers[i]
     return product
 
@@ -99,7 +99,7 @@ print join_strings(animals)
 def average(numbers):
     total = 0
     counter = 0
-    for i in numbers:
+    for i in range(len(numbers)):
         total = total + numbers[i]
         counter += 1
     return total/counter
